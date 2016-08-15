@@ -1,0 +1,13 @@
+# Maven
+target
+
+# Eclipse
+.project
+.settings
+.classpath
+
+# IntelliJ IDEA
+.idea
+
+jax-rs-parser-nasdaq.iml
+travis-ci.bat
