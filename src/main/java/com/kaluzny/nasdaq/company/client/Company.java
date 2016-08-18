@@ -56,4 +56,16 @@ public class Company {
     public void setDataAsOf(String dataAsOf) {
         this.dataAsOf = dataAsOf;
     }
+
+    @Override
+    public String toString() {
+        return "Company{" +
+                "exchange='" + exchange + '\'' +
+                ", nameCompany='" + nameCompany + '\'' +
+                ", sectorCompany='" + sectorCompany + '\'' +
+                ", symbolCompany='" + symbolCompany + '\'' +
+                ", stockQuotes='" + stockQuotes + '\'' +
+                ", dataAsOf='" + dataAsOf + '\'' +
+                '}';
+    }
 }
