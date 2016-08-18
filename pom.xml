@@ -42,13 +42,10 @@
             <artifactId>jsoup</artifactId>
             <version>1.9.2</version>
         </dependency>
-
     </dependencies>
 
     <build>
-
         <finalName>jax-rs-parser-nasdaq</finalName>
-
         <plugins>
             <!-- Findbugs plugin -->
             <plugin>
@@ -84,9 +81,6 @@
                     <port>9991</port>
                 </configuration>
             </plugin>
-            
         </plugins>
-
     </build>
-
 </project>
