@@ -1,4 +1,4 @@
-package com.kaluzny.nasdaq.company;
+package com.kaluzny.nasdaq.interceptor;
 
 import javax.interceptor.InterceptorBinding;
 import java.lang.annotation.Inherited;

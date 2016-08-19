@@ -1,6 +1,7 @@
 package com.kaluzny.nasdaq.company;
 
 import com.kaluzny.nasdaq.CompanyException;
+import com.kaluzny.nasdaq.interceptor.Logged;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
