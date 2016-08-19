@@ -1,6 +1,7 @@
 package com.kaluzny.nasdaq.company;
 
 import com.kaluzny.nasdaq.CompanyException;
+import com.kaluzny.nasdaq.company.interceptor.Logged;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -10,6 +11,7 @@ import java.io.IOException;
 import java.util.logging.Logger;
 
 @ApplicationScoped
+@Logged
 public class CompanyService {
     private static final Logger LOGGER = Logger.getLogger(CompanyService.class.getName());
     private static final String URL_FORMAT = "http://www.nasdaq.com/symbol/%s/real-time";
@@ -17,12 +19,14 @@ public class CompanyService {
     private Document document;
     private Element element;
 
+    @Logged
     public Document parse(String company) throws IOException {
         String url = String.format(URL_FORMAT, company);
         LOGGER.info(String.format(">>> Connection to the: '%s'.", company));
         return Jsoup.connect(url).userAgent(USER_AGENT).get();
     }
 
+    @Logged
     public String getExchange(String company) {
         try {
             document = parse(company);
@@ -35,6 +39,7 @@ public class CompanyService {
         return element.text();
     }
 
+    @Logged
     public String getNameCompany(String company) {
         try {
             document = parse(company);
@@ -47,6 +52,7 @@ public class CompanyService {
         return element.text();
     }
 
+    @Logged
     public String getSectorCompany(String company) {
         try {
             document = parse(company);
@@ -59,6 +65,7 @@ public class CompanyService {
         return element.text();
     }
 
+    @Logged
     public String getStockQuotes(String company) {
         try {
             document = parse(company);
@@ -71,6 +78,7 @@ public class CompanyService {
         return element.text();
     }
 
+    @Logged
     public String getDataAsOf(String company) {
         try {
             document = parse(company);
