@@ -16,4 +16,21 @@ public class CompanyServiceTest {
                 parser.getNameCompany("International Business Machines Corporation " +
                         "Common Stock Real Time Stock Quotes"));
     }
+
+    @Test
+    public void sectorCompanyTest() throws IOException {
+        CompanyService parser = new CompanyService();
+        Assert.assertEquals("Industry: Finance",
+                parser.getSectorCompany("International Business Machines Corporation " +
+                        "Common Stock Real Time Stock Quotes"));
+    }
+
+    @Test
+    public void getDataAsOfTest() throws IOException {
+        CompanyService parser = new CompanyService();
+        Assert.assertEquals("$70.44",
+                parser.getStockQuotes("International Business Machines Corporation " +
+                        "Common Stock Real Time Stock Quotes"));
+
+    }
 }

@@ -82,16 +82,16 @@
                     <port>9991</port>
                 </configuration>
             </plugin>
-
+            <!-- Coveralls maven plugin -->
             <plugin>
                 <groupId>org.eluder.coveralls</groupId>
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>4.2.0</version>
                 <configuration>
-                    <repoToken>yourcoverallsprojectrepositorytoken</repoToken>
+                    <repoToken>zRYf8aVA3CYHzNg3CRDn0eHCfzqDsplqL</repoToken>
                 </configuration>
             </plugin>
-
+            <!-- JaCoCo -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
