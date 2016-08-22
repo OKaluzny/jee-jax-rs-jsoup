@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/OKaluzny/jax-rs-parser-nasdaq.svg?branch=master)](https://travis-ci.org/OKaluzny/jax-rs-parser-nasdaq)
 [![Coverage Status](https://coveralls.io/repos/github/OKaluzny/jax-rs-parser-nasdaq/badge.svg?branch=master)](https://coveralls.io/github/OKaluzny/jax-rs-parser-nasdaq?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/OKaluzny/jax-rs-parser-nasdaq/badge.svg?branch=master)](https://coveralls.io/github/OKaluzny/jax-rs-parser-nasdaq?branch=master)
 # Summary
 
 Application based on Java EE.
