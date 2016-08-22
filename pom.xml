@@ -91,7 +91,7 @@
                     <repoToken>zRYf8aVA3CYHzNg3CRDn0eHCfzqDsplqL</repoToken>
                 </configuration>
             </plugin>
-            <!-- JaCoCo -->
+            <!-- JaCoCo maven plugin -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
