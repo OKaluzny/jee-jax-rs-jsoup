@@ -1,8 +1,5 @@
 package com.kaluzny.nasdaq.company.client;
 
-import com.kaluzny.nasdaq.converter.GsonEntity;
-
-@GsonEntity(prettyPrint = true)
 public class Company {
 
     private String exchange;
@@ -29,6 +26,26 @@ public class Company {
 
     public void setDataAsOf(String dataAsOf) {
         this.dataAsOf = dataAsOf;
+    }
+
+    public String getExchange() {
+        return exchange;
+    }
+
+    public String getSectorCompany() {
+        return sectorCompany;
+    }
+
+    public String getSymbolCompany() {
+        return symbolCompany;
+    }
+
+    public String getExchangePrice() {
+        return exchangePrice;
+    }
+
+    public String getDataAsOf() {
+        return dataAsOf;
     }
 
     @Override
