@@ -35,12 +35,12 @@ public class GsonEntityConverter implements MessageBodyReader<Object>, MessageBo
 
     @Override
     public Object readFrom(Class<Object> type, Type genericType, Annotation[] annotations, MediaType mediaType,
-                           MultivaluedMap<String, String> httpHeaders, InputStream entityStream)
+                           MultivaluedMap<String, String> httpHeaders, InputStream inputStream)
             throws IOException, WebApplicationException {
         LOGGER.info("Read entity.");
 
         Gson gson = new GsonBuilder().create();
-        return gson.fromJson(new InputStreamReader(entityStream), type);
+        return gson.fromJson(new InputStreamReader(inputStream), type);
     }
 
     @Override
