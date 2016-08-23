@@ -40,19 +40,6 @@ public class CompanyService {
     }
 
     @Logged
-    public String getNameCompany(String company) {
-        try {
-            document = parse(company);
-            element = document.getElementById("qwidget_pageheader").firstElementSibling();
-
-        } catch (IOException exception) {
-            throw new CompanyException("Could not parse a name company.", exception);
-        }
-        LOGGER.info(String.format(">>> Gets the name a company is: '%s'.", element.text()));
-        return element.text();
-    }
-
-    @Logged
     public String getSectorCompany(String company) {
         try {
             document = parse(company);
@@ -66,7 +53,7 @@ public class CompanyService {
     }
 
     @Logged
-    public String getStockQuotes(String company) {
+    public String getExchangePrice(String company) {
         try {
             document = parse(company);
             element = document.getElementsByClass("qwidget-dollar").first();

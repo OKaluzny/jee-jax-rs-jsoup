@@ -24,11 +24,10 @@ public class CompanyResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Company getCompany(@PathParam("symbol") String companySymbol) {
         Company company = new Company();
-        company.setExchange(companyService.getExchange(companySymbol));
-        company.setNameCompany(companyService.getNameCompany(companySymbol));
-        company.setSectorCompany(companyService.getSectorCompany(companySymbol));
         company.setSymbolCompany(companySymbol);
-        company.setStockQuotes(companyService.getStockQuotes(companySymbol));
+        company.setExchange(companyService.getExchange(companySymbol));
+        company.setSectorCompany(companyService.getSectorCompany(companySymbol));
+        company.setExchangePrice(companyService.getExchangePrice(companySymbol));
         company.setDataAsOf(companyService.getDataAsOf(companySymbol));
         return company;
     }
