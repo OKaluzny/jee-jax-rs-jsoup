@@ -1,7 +1,6 @@
 package com.kaluzny.nasdaq.company;
 
 import com.kaluzny.nasdaq.CompanyException;
-import com.kaluzny.nasdaq.company.client.Company;
 import com.kaluzny.nasdaq.interceptor.Logged;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -30,7 +29,6 @@ public class CompanyService {
 
     @Logged
     public String getExchange(String company) {
-
         try {
             document = getDocument(company);
             element = document.getElementById("qbar_exchangeLabel");
