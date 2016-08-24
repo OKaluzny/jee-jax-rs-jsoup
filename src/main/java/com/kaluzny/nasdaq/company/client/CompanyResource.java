@@ -28,7 +28,7 @@ public class CompanyResource {
         company.setExchange(companyService.getExchange(companySymbol));
         company.setSectorCompany(companyService.getSectorCompany(companySymbol));
         company.setExchangePrice(companyService.getExchangePrice(companySymbol));
-        company.setDataAsOf(companyService.getDataAsOf(companySymbol));
+        company.setMarketTime(companyService.getMarketTime(companySymbol));
         return company;
     }
 }

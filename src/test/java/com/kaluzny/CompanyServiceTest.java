@@ -33,7 +33,7 @@ public class CompanyServiceTest {
 
     @Ignore
     @Test
-    public void testdateAsOf() throws IOException {
+    public void testMarketTime() throws IOException {
         CompanyService parser = new CompanyService();
         Assert.assertEquals("8/23/2016 12:01:04 PM",
                 parser.getSectorCompany("AAPL"));

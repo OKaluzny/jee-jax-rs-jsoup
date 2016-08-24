@@ -6,46 +6,46 @@ public class Company {
     private String sectorCompany;
     private String symbolCompany;
     private String exchangePrice;
-    private String dataAsOf;
-
-    public void setExchange(String exchange) {
-        this.exchange = exchange;
-    }
-
-    public void setSectorCompany(String sectorCompany) {
-        this.sectorCompany = sectorCompany;
-    }
-
-    public void setSymbolCompany(String symbolCompany) {
-        this.symbolCompany = symbolCompany;
-    }
-
-    public void setExchangePrice(String exchangePrice) {
-        this.exchangePrice = exchangePrice;
-    }
-
-    public void setDataAsOf(String dataAsOf) {
-        this.dataAsOf = dataAsOf;
-    }
+    private String marketTime;
 
     public String getExchange() {
         return exchange;
+    }
+
+    public void setExchange(String exchange) {
+        this.exchange = exchange;
     }
 
     public String getSectorCompany() {
         return sectorCompany;
     }
 
+    public void setSectorCompany(String sectorCompany) {
+        this.sectorCompany = sectorCompany;
+    }
+
     public String getSymbolCompany() {
         return symbolCompany;
+    }
+
+    public void setSymbolCompany(String symbolCompany) {
+        this.symbolCompany = symbolCompany;
     }
 
     public String getExchangePrice() {
         return exchangePrice;
     }
 
-    public String getDataAsOf() {
-        return dataAsOf;
+    public void setExchangePrice(String exchangePrice) {
+        this.exchangePrice = exchangePrice;
+    }
+
+    public String getMarketTime() {
+        return marketTime;
+    }
+
+    public void setMarketTime(String marketTime) {
+        this.marketTime = marketTime;
     }
 
     @Override
@@ -55,7 +55,7 @@ public class Company {
                 ", sectorCompany='" + sectorCompany + '\'' +
                 ", symbolCompany='" + symbolCompany + '\'' +
                 ", exchangePrice='" + exchangePrice + '\'' +
-                ", dataAsOf='" + dataAsOf + '\'' +
+                ", marketTime='" + marketTime + '\'' +
                 '}';
     }
 }

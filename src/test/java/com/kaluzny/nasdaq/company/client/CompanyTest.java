@@ -37,7 +37,7 @@ public class CompanyTest {
     @Test
     public void testSetDataAsOf() throws Exception {
         Company company = new Company();
-        company.setDataAsOf("8/23/2016");
-        assertTrue(company.getDataAsOf() == "8/23/2016");
+        company.setMarketTime("8/23/2016");
+        assertTrue(company.getMarketTime() == "8/23/2016");
     }
 }

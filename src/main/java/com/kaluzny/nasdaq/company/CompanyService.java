@@ -1,6 +1,7 @@
 package com.kaluzny.nasdaq.company;
 
 import com.kaluzny.nasdaq.CompanyException;
+import com.kaluzny.nasdaq.company.client.Company;
 import com.kaluzny.nasdaq.interceptor.Logged;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -20,18 +21,19 @@ public class CompanyService {
     private Element element;
 
     @Logged
-    public Document parse(String company) throws IOException {
+    public Document getDocument(String company) throws IOException {
         String url = String.format(URL_FORMAT, company);
+        document = Jsoup.connect(url).userAgent(USER_AGENT).get();
         LOGGER.info(String.format(">>> Connection to the: '%s'.", company));
-        return Jsoup.connect(url).userAgent(USER_AGENT).get();
+        return document;
     }
 
     @Logged
     public String getExchange(String company) {
-        try {
-            document = parse(company);
-            element = document.getElementById("qbar_exchangeLabel");
 
+        try {
+            document = getDocument(company);
+            element = document.getElementById("qbar_exchangeLabel");
         } catch (IOException exception) {
             throw new CompanyException("Could not parse an exchange.", exception);
         }
@@ -42,9 +44,8 @@ public class CompanyService {
     @Logged
     public String getSectorCompany(String company) {
         try {
-            document = parse(company);
+            document = getDocument(company);
             element = document.getElementById("qbar_sectorLabel");
-
         } catch (IOException exception) {
             throw new CompanyException("Could not parse sector.", exception);
         }
@@ -55,9 +56,8 @@ public class CompanyService {
     @Logged
     public String getExchangePrice(String company) {
         try {
-            document = parse(company);
+            document = getDocument(company);
             element = document.getElementsByClass("qwidget-dollar").first();
-
         } catch (IOException exception) {
             throw new CompanyException("Could not parse company.", exception);
         }
@@ -66,11 +66,10 @@ public class CompanyService {
     }
 
     @Logged
-    public String getDataAsOf(String company) {
+    public String getMarketTime(String company) {
         try {
-            document = parse(company);
+            document = getDocument(company);
             element = document.getElementById("qwidget_markettime");
-
         } catch (IOException exception) {
             throw new CompanyException("Could not parse company.", exception);
         }
