@@ -13,9 +13,14 @@ import java.util.logging.Logger;
 @ApplicationScoped
 @Logged
 public class CompanyService {
+
     private static final Logger LOGGER = Logger.getLogger(CompanyService.class.getName());
     private static final String URL_FORMAT = "http://www.nasdaq.com/symbol/%s/real-time";
     private static final String USER_AGENT = "Chrome";
+    private static final String EXCHANGE_LABEL = "qbar_exchangeLabel";
+    private static final String SECTOR_LABEL = "qbar_sectorLabel";
+    private static final String DWIDGET_DOLLAR = "qwidget-dollar";
+    private static final String DWIDGET_MARKETTIME = "qwidget_markettime";
     private Document document;
     private Element element;
 
@@ -31,7 +36,7 @@ public class CompanyService {
     public String getExchange(String company) {
         try {
             document = getDocument(company);
-            element = document.getElementById("qbar_exchangeLabel");
+            element = document.getElementById(EXCHANGE_LABEL);
         } catch (IOException exception) {
             throw new CompanyException("Could not parse an exchange.", exception);
         }
@@ -43,7 +48,7 @@ public class CompanyService {
     public String getSectorCompany(String company) {
         try {
             document = getDocument(company);
-            element = document.getElementById("qbar_sectorLabel");
+            element = document.getElementById(SECTOR_LABEL);
         } catch (IOException exception) {
             throw new CompanyException("Could not parse sector.", exception);
         }
@@ -55,7 +60,7 @@ public class CompanyService {
     public String getExchangePrice(String company) {
         try {
             document = getDocument(company);
-            element = document.getElementsByClass("qwidget-dollar").first();
+            element = document.getElementsByClass(DWIDGET_DOLLAR).first();
         } catch (IOException exception) {
             throw new CompanyException("Could not parse company.", exception);
         }
@@ -67,7 +72,7 @@ public class CompanyService {
     public String getMarketTime(String company) {
         try {
             document = getDocument(company);
-            element = document.getElementById("qwidget_markettime");
+            element = document.getElementById(DWIDGET_MARKETTIME);
         } catch (IOException exception) {
             throw new CompanyException("Could not parse company.", exception);
         }

@@ -1,10 +1,15 @@
 package com.kaluzny.nasdaq.company.client;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Company {
 
     private String exchange;
     private String sectorCompany;
+    @Size(max = 10)
     private String symbolCompany;
+    @NotNull
     private String exchangePrice;
     private String marketTime;
 
