@@ -23,12 +23,16 @@ public class CompanyResource {
     @Path("{symbol}")
     @Produces(MediaType.APPLICATION_JSON)
     public Company getCompany(@PathParam("symbol") String companySymbol) {
-        Company company = new Company();
-        company.setSymbolCompany(companySymbol);
-        company.setExchange(companyService.getExchange(companySymbol));
-        company.setSectorCompany(companyService.getSectorCompany(companySymbol));
-        company.setExchangePrice(companyService.getExchangePrice(companySymbol));
-        company.setMarketTime(companyService.getMarketTime(companySymbol));
+        Company company = new Company.Builder()
+                .exchange(companyService.getExchange(companySymbol))
+                .sectorCompany(companyService.getSectorCompany(companySymbol))
+                .symbolCompany(companySymbol)
+                .exchangePrice(companyService.getExchangePrice(companySymbol))
+                .marketTime(companyService.getMarketTime(companySymbol))
+                .build();
         return company;
+
+
+
     }
 }

@@ -13,6 +13,53 @@ public class Company {
     private String exchangePrice;
     private String marketTime;
 
+    public static class Builder {
+
+        private String exchange;
+        private String sectorCompany;
+        private String symbolCompany;
+        private String exchangePrice;
+        private String marketTime;
+
+        public Builder exchange(String val) {
+            exchange = val;
+            return this;
+        }
+
+        public Builder sectorCompany(String val) {
+            sectorCompany = val;
+            return this;
+        }
+
+        public Builder symbolCompany(String val) {
+            symbolCompany = val;
+            return this;
+        }
+
+        public Builder exchangePrice(String val) {
+            exchangePrice = val;
+            return this;
+        }
+
+        public Builder marketTime(String val) {
+            marketTime = val;
+            return this;
+        }
+
+        public Company build() {
+            return new Company(this);
+        }
+    }
+
+    private Company(Builder builder) {
+
+        exchange = builder.exchange;
+        sectorCompany = builder.sectorCompany;
+        symbolCompany = builder.symbolCompany;
+        exchangePrice = builder.exchangePrice;
+        marketTime = builder.marketTime;
+    }
+
     public String getExchange() {
         return exchange;
     }
