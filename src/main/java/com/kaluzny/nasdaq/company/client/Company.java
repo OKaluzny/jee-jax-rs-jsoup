@@ -54,6 +54,32 @@ public class Company {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Company)) return false;
+
+        Company company = (Company) o;
+
+        if (!exchange.equals(company.exchange)) return false;
+        if (!exchangePrice.equals(company.exchangePrice)) return false;
+        if (!marketTime.equals(company.marketTime)) return false;
+        if (!sectorCompany.equals(company.sectorCompany)) return false;
+        if (!symbolCompany.equals(company.symbolCompany)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = exchange.hashCode();
+        result = 31 * result + sectorCompany.hashCode();
+        result = 31 * result + symbolCompany.hashCode();
+        result = 31 * result + exchangePrice.hashCode();
+        result = 31 * result + marketTime.hashCode();
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "Company{" +
                 "exchange='" + exchange + '\'' +

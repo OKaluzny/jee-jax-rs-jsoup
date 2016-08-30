@@ -29,7 +29,7 @@ public class CompanyService {
     public Document getDocument(String company) throws IOException {
         String url = String.format(URL_FORMAT, company);
         document = Jsoup.connect(url).userAgent(USER_AGENT).get();
-        LOGGER.info( String.format(">>> Connection to the: '%s'.", company));
+        LOGGER.info(String.format(">>> Connection to the: '%s'.", company));
         return document;
     }
 
@@ -53,7 +53,7 @@ public class CompanyService {
         } catch (IOException exception) {
             throw new CompanyException("Could not parse sector.", exception);
         }
-        LOGGER.info( String.format(">>> Gets the name a sector: '%s'.", element.text()));
+        LOGGER.info(String.format(">>> Gets the name a sector: '%s'.", element.text()));
         return element.text();
     }
 
@@ -65,7 +65,7 @@ public class CompanyService {
         } catch (IOException exception) {
             throw new CompanyException("Could not parse company.", exception);
         }
-        LOGGER.info( String.format(">>> Gets the stock quotes: '%s'.", element.text()));
+        LOGGER.info(String.format(">>> Gets the stock quotes: '%s'.", element.text()));
         return element.text();
     }
 
@@ -77,7 +77,7 @@ public class CompanyService {
         } catch (IOException exception) {
             throw new CompanyException("Could not parse company.", exception);
         }
-        LOGGER.info( String.format(">>> Gets the date as of: '%s'.", element.text()));
+        LOGGER.info(String.format(">>> Gets the date as of: '%s'.", element.text()));
         return element.text();
     }
 }
