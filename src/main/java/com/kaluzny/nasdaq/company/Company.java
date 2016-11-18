@@ -1,30 +1,12 @@
-package com.kaluzny.nasdaq.company.client;
+package com.kaluzny.nasdaq.company;
 
-/*
-@Entity
-@NamedQueries({
-        @NamedQuery(name = "findAllCompanies", query = "SELECT c FROM Company c"),
-        @NamedQuery(name = "findBookExchange", query = "SELECT c FROM Company c WHERE c.exchange ='AAPL'")
-})*/
 public class Company {
-    // @Id
-    // @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long id;
-
     private String exchange;
-
-    //@Column(name = "sector_company")
     private String sectorCompany;
-
-    //@Column(name = "symbol_company")
-    //@Size(max = 10)
     private String symbolCompany;
-
-    // @Column(name = "exchange_price")
-    // @NotNull
     private String exchangePrice;
-
-    //@Column(name = "market_time")
     private String marketTime;
 
     public Company() {

@@ -1,6 +1,4 @@
-package com.kaluzny.nasdaq.company.client;
-
-import com.kaluzny.nasdaq.company.CompanyService;
+package com.kaluzny.nasdaq.company;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
