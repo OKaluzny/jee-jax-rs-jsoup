@@ -1,17 +1,45 @@
 package com.kaluzny.nasdaq.company.client;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@Entity
+@NamedQueries({
+        @NamedQuery(name = "findAllCompanies", query = "SELECT c FROM Company c"),
+        @NamedQuery(name = "findBookExchange", query = "SELECT c FROM Company c WHERE c.exchange ='AAPL'")
+})
 public class Company {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private String exchange;
+
+    @Column(name = "sector_company")
     private String sectorCompany;
+
+    @Column(name = "symbol_company")
     @Size(max = 10)
     private String symbolCompany;
+
+    @Column(name = "exchange_price")
     @NotNull
     private String exchangePrice;
+
+    @Column(name = "market_time")
     private String marketTime;
+
+    public Company() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getExchange() {
         return exchange;
@@ -54,35 +82,10 @@ public class Company {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Company)) return false;
-
-        Company company = (Company) o;
-
-        if (!exchange.equals(company.exchange)) return false;
-        if (!exchangePrice.equals(company.exchangePrice)) return false;
-        if (!marketTime.equals(company.marketTime)) return false;
-        if (!sectorCompany.equals(company.sectorCompany)) return false;
-        if (!symbolCompany.equals(company.symbolCompany)) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = exchange.hashCode();
-        result = 31 * result + sectorCompany.hashCode();
-        result = 31 * result + symbolCompany.hashCode();
-        result = 31 * result + exchangePrice.hashCode();
-        result = 31 * result + marketTime.hashCode();
-        return result;
-    }
-
-    @Override
     public String toString() {
         return "Company{" +
-                "exchange='" + exchange + '\'' +
+                "id=" + id +
+                ", exchange='" + exchange + '\'' +
                 ", sectorCompany='" + sectorCompany + '\'' +
                 ", symbolCompany='" + symbolCompany + '\'' +
                 ", exchangePrice='" + exchangePrice + '\'' +
