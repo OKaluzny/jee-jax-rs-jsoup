@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/OKaluzny/javaee-jaxrs-nasdaq.svg?branch=master)](https://travis-ci.org/OKaluzny/javaee-jaxrs-nasdaq)
+[![Build Status](https://travis-ci.org/OKaluzny/jee-jax-rs-jsoup.svg?branch=master)](https://travis-ci.org/OKaluzny/jee-jax-rs-jsoup)
 [![Coverage Status](https://coveralls.io/repos/github/OKaluzny/jax-rs-parser-nasdaq/badge.svg?branch=master)](https://coveralls.io/github/OKaluzny/jax-rs-parser-nasdaq?branch=master)
 ## Summary
 
@@ -26,7 +26,7 @@ Scripts for the local environment:
 
 ### This is what my JAX-RS API does:
 
-* Open Postman or some other assistant.
+* Open Postman or some other assistant;
 * Go to `http://localhost:8080/jee-jax-rs-jsoup/companies/` and add `AAPL` or other symbol;
 * Do it `GET` request.
 
