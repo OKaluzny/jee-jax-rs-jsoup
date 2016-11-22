@@ -1,4 +1,4 @@
-package com.kaluzny.nasdaq;
+package com.kaluzny.nasdaq.company;
 
 public class CompanyException extends RuntimeException {
 

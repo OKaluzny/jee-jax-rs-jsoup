@@ -12,8 +12,7 @@ public class CompanyServiceTest {
     @Test
     public void testGetExchange() throws IOException {
         CompanyService parser = new CompanyService();
-        Assert.assertEquals("Exchange: NASDAQ",
-                parser.getExchange("AAPL"));
+        Assert.assertEquals("Exchange:NASDAQ", parser.getExchange("AAPL"));
     }
 
     @Test
@@ -27,15 +26,7 @@ public class CompanyServiceTest {
     @Test
     public void testGetExchangePrice() throws IOException {
         CompanyService parser = new CompanyService();
-        Assert.assertEquals("$108.89",
-                parser.getSectorCompany("AAPL"));
-    }
-
-    @Ignore
-    @Test
-    public void testMarketTime() throws IOException {
-        CompanyService parser = new CompanyService();
-        Assert.assertEquals("8/23/2016 12:01:04 PM",
+        Assert.assertEquals("Industry: Technology",
                 parser.getSectorCompany("AAPL"));
     }
 }

@@ -2,8 +2,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/OKaluzny/jax-rs-parser-nasdaq/badge.svg?branch=master)](https://coveralls.io/github/OKaluzny/jax-rs-parser-nasdaq?branch=master)
 ## Summary
 
-Application based on Java EE.
-The sandbox application gets data from the [NASDAQ](http://www.nasdaq.com/symbol/ibm/real-time)
+JAX-RS API based on Java EE.
+This api gets data from the [NASDAQ](http://www.nasdaq.com/symbol/ibm/real-time)
 
 ### Tools
 
@@ -24,6 +24,12 @@ Scripts for the local environment:
 * `app-deploy` - deploy the application.
 * `app-check` - check the application using the [Sonar](http://www.sonarqube.org/).
 
-### The example in the Postman:
+### This is what my JAX-RS API does:
 
-![alt tag](http://i.piccy.info/i9/9866ed6bad4aa3e52730bd1e96a76cdd/1471273217/54445/1060816/jax_rs_nasdaq.jpg)
+* Open Postman or some other assistant.
+* Go to `http://localhost:8080/jee-jax-rs-jsoup/companies/` and add `AAPL` or other symbol;
+* Do it `GET` request.
+
+### The example in the Postman :
+
+![alt tag](http://i.piccy.info/i9/5dee22ad330d3d02cb5e3fe1eb050050/1479811748/61026/1085055/jax_rs.jpg)

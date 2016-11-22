@@ -2,7 +2,6 @@ package com.kaluzny.nasdaq.company;
 
 public class Company {
 
-    private Long id;
     private String exchange;
     private String sectorCompany;
     private String symbolCompany;
@@ -10,14 +9,6 @@ public class Company {
     private String marketTime;
 
     public Company() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getExchange() {
@@ -63,8 +54,7 @@ public class Company {
     @Override
     public String toString() {
         return "Company{" +
-                "id=" + id +
-                ", exchange='" + exchange + '\'' +
+                "exchange='" + exchange + '\'' +
                 ", sectorCompany='" + sectorCompany + '\'' +
                 ", symbolCompany='" + symbolCompany + '\'' +
                 ", exchangePrice='" + exchangePrice + '\'' +

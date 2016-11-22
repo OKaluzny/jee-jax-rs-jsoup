@@ -1,6 +1,5 @@
 package com.kaluzny.nasdaq.company;
 
-import com.kaluzny.nasdaq.CompanyException;
 import com.kaluzny.nasdaq.interceptor.Logged;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -22,6 +21,7 @@ public class CompanyService {
     private static final String SECTOR_LABEL = "qbar_sectorLabel";
     private static final String DWIDGET_DOLLAR = "qwidget-dollar";
     private static final String DWIDGET_MARKETTIME = "qwidget_markettime";
+
     private Document document;
     private Element element;
 

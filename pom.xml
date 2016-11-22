@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.kaluzny</groupId>
-    <artifactId>jax-rs-parser-nasdaq</artifactId>
+    <artifactId>jee-jax-rs-jsoup</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>jax-rs-parser-nasdaq</name>
+    <name>jee-jax-rs-jsoup</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,11 +36,6 @@
             <version>2.0.2-beta</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.10</version>
-        </dependency>
         <!-- Jsoup -->
         <dependency>
             <groupId>org.jsoup</groupId>
@@ -62,7 +57,7 @@
     </dependencies>
 
     <build>
-        <finalName>jax-rs-parser-nasdaq</finalName>
+        <finalName>jee-jax-rs-jsoup</finalName>
         <plugins>
             <!-- Findbugs plugin -->
             <plugin>
@@ -121,7 +116,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 </project>

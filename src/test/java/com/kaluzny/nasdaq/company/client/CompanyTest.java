@@ -1,5 +1,6 @@
 package com.kaluzny.nasdaq.company.client;
 
+import com.kaluzny.nasdaq.company.Company;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
