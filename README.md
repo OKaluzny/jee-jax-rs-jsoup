@@ -27,7 +27,7 @@ Scripts for the local environment:
 ### This is what my JAX-RS API does:
 
 * Open Postman or some other assistant;
-* Go to `http://localhost:8080/jee-jax-rs-jsoup/companies/` and add `AAPL` or other symbol;
+* Go to [http://localhost:8080/jee-jax-rs-jsoup/companies/](http://localhost:8080/jee-jax-rs-jsoup/companies/) and add `AAPL` or other symbol;
 * Do it `GET` request.
 
 ### The example in the Postman :
