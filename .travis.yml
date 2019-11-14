@@ -1,12 +1,10 @@
-{
-  "jdk": [
-    "oraclejdk8"
-  ],
-  "sudo": [
-    "required"
-  ],
-  "language": "java",
-  "after_success": [
-    "mvn clean test jacoco:report coveralls:report"
-  ]
-}
+language: java
+
+jdk:
+  - oraclejdk8
+
+sudo:
+  - required
+dist: trusty
+after_success:
+  - mvn clean test jacoco:report coveralls:report
