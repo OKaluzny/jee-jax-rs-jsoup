@@ -1,6 +1,7 @@
 package com.kaluzny.nasdaq.company;
 
 import com.kaluzny.nasdaq.interceptor.Logged;
+import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -12,6 +13,7 @@ import java.io.IOException;
 
 @ApplicationScoped
 @Logged
+@Slf4j
 public class CompanyService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CompanyService.class);
@@ -27,23 +29,32 @@ public class CompanyService {
 
     @Logged
     public Document getDocument(String company) throws IOException {
+        log.trace("getDocument() - start: company = {}", company);
         String url = String.format(URL_FORMAT, company);
         document = Jsoup.connect(url).userAgent(USER_AGENT).get();
-        LOGGER.info(String.format(">>> Connection to the: '%s'.", company));
+        // LOGGER.info(String.format(">>> Connection to the: '%s'.", company));
+        log.trace("getDocument() - end: document = {}", document);
         return document;
     }
 
     @Logged
     public String getExchange(String company) {
+        log.trace("getExchange() - start: company = {}", company);
         try {
             document = getDocument(company);
             element = document.getElementById(EXCHANGE_LABEL);
+            log.trace("getExchange() - end: document = {}, element = {}", document, element);
         } catch (IOException exception) {
             throw new CompanyException("Could not parse an exchange.", exception);
         }
         LOGGER.info(String.format(">>> Gets the name an exchange: '%s'.", element.text()));
         return element.text();
     }
+
+    /*catch (NullPointerException ex) {
+        String errorMessage = String.format(" with id=%s is not found", id);
+        log.error(errorMessage, ex);
+        throw new EntityNotFoundException(errorMessage);*/
 
     @Logged
     public String getSectorCompany(String company) {
@@ -53,7 +64,7 @@ public class CompanyService {
         } catch (IOException exception) {
             throw new CompanyException("Could not parse sector.", exception);
         }
-        LOGGER.info(String.format(">>> Gets the name a sector: '%s'.", element.text()));
+//        LOGGER.info(String.format(">>> Gets the name a sector: '%s'.", element.text()));
         return element.text();
     }
 
