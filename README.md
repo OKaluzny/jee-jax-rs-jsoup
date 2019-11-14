@@ -14,7 +14,7 @@ This api gets data from the [NASDAQ](http://www.nasdaq.com/symbol/ibm/real-time)
 
 ### Library
 
-* Java HTML Parser - [Jsoup 1.9.2](https://jsoup.org/)
+* Java HTML Parser - [Jsoup 1.11.3](https://jsoup.org/)
 
 ### Build and Deploy
 

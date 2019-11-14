@@ -8,7 +8,7 @@ target
 
 # IntelliJ IDEA
 .idea
-.iml
+jee-jax-rs-jsoup.iml
 
 jax-rs-parser-nasdaq.iml
 travis-ci.bat

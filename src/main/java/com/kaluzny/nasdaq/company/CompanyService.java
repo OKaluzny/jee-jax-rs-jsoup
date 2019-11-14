@@ -32,7 +32,6 @@ public class CompanyService {
         log.trace("getDocument() - start: company = {}", company);
         String url = String.format(URL_FORMAT, company);
         document = Jsoup.connect(url).userAgent(USER_AGENT).get();
-        // LOGGER.info(String.format(">>> Connection to the: '%s'.", company));
         log.trace("getDocument() - end: document = {}", document);
         return document;
     }
