@@ -27,7 +27,7 @@
         <mavenPlagin.version>3.5.1</mavenPlagin.version>
         <wildflyPlagin.version>1.0.2.Final</wildflyPlagin.version>
         <coverallsPlagin.version>4.3.0</coverallsPlagin.version>
-        <jacocoPlagin.version>0.7.6.201602180812</jacocoPlagin.version>
+        <jacocoPlagin.version>0.8.5</jacocoPlagin.version>
     </properties>
 
     <dependencies>
