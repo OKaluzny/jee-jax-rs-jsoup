@@ -22,6 +22,12 @@
         <junit.version>4.12</junit.version>
         <mokito.version>2.10.0</mokito.version>
         <lombok.version>1.18.10</lombok.version>
+
+        <findbugsPlagin.version>3.0.5</findbugsPlagin.version>
+        <mavenPlagin.version>3.5.1</mavenPlagin.version>
+        <wildflyPlagin.version>1.0.2.Final</wildflyPlagin.version>
+        <coverallsPlagin.version>4.3.0</coverallsPlagin.version>
+        <jacocoPlagin.version>0.7.6.201602180812</jacocoPlagin.version>
     </properties>
 
     <dependencies>
@@ -80,7 +86,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
-                <version>3.0.3</version>
+                <version>${findbugsPlagin.version}</version>
                 <executions>
                     <execution>
                         <phase>verify</phase>
@@ -94,7 +100,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
+                <version>${mavenPlagin.version}</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -104,7 +110,7 @@
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
-                <version>1.0.2.Final</version>
+                <version>${wildflyPlagin.version}</version>
                 <configuration>
                     <hostname>127.0.0.1</hostname>
                     <port>9991</port>
@@ -114,7 +120,7 @@
             <plugin>
                 <groupId>org.eluder.coveralls</groupId>
                 <artifactId>coveralls-maven-plugin</artifactId>
-                <version>4.2.0</version>
+                <version>${coverallsPlagin.version}</version>
                 <configuration>
                     <repoToken>zRYf8aVA3CYHzNg3CRDn0eHCfzqDsplqL</repoToken>
                 </configuration>
@@ -123,7 +129,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.6.201602180812</version>
+                <version>${jacocoPlagin.version}</version>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
