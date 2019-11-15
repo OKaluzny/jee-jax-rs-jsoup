@@ -11,6 +11,7 @@ This api gets data from the [NASDAQ](http://www.nasdaq.com/symbol/ibm/real-time)
 * Automated testing - [JUnit 4.12](http://junit.org/junit4/)
 * Static Analysis - [FindBugs 3.0.1](http://findbugs.sourceforge.net/)
 * Application Server - [WildFly 10.0.0.Final](http://wildfly.org/)
+* Project Lombok - [lombok 1.18.10](https://projectlombok.org/)
 
 ### Library
 
