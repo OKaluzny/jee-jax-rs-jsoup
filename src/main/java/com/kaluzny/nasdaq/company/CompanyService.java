@@ -90,4 +90,15 @@ public class CompanyService {
         LOGGER.info(String.format(">>> Gets the date as of: '%s'.", element.text()));
         return element.text();
     }
+
+    @Logged
+    public Company buildCompany(String companySymbol) {
+        Company company = new Company();
+        company.setSymbolCompany(companySymbol);
+        company.setExchange(getExchange(companySymbol));
+        company.setSectorCompany(getSectorCompany(companySymbol));
+        company.setExchangePrice(getExchangePrice(companySymbol));
+        company.setMarketTime(getMarketTime(companySymbol));
+        return company;
+    }
 }

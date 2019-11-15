@@ -1,5 +1,6 @@
 package com.kaluzny;
 
+import com.kaluzny.nasdaq.company.Company;
 import com.kaluzny.nasdaq.company.CompanyService;
 import org.jsoup.nodes.Document;
 import org.junit.Test;
@@ -12,13 +13,15 @@ import static org.junit.Assert.assertNotEquals;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 
-
 public class CompanyServiceTest {
 
     private static final String COMPANY = "AAPL";
 
     @Mock
     private Document document;
+
+    @Mock
+    private Company company;
 
     @Test
     public void testGetDocument() throws IOException {
@@ -69,5 +72,16 @@ public class CompanyServiceTest {
         assertEquals(COMPANY, spyParser.getMarketTime(COMPANY));
         assertNotEquals("Alfa", spyParser.getMarketTime(COMPANY));
         doThrow(new RuntimeException()).when(spyParser).getMarketTime(any());
+    }
+
+    @Test
+    public void testBuildCompany() throws IOException {
+        CompanyService spyParser = spy(CompanyService.class);
+        doReturn(company).when(spyParser).buildCompany(anyString());
+        spyParser.buildCompany(COMPANY);
+        verify(spyParser, times(1)).buildCompany(COMPANY);
+        assertEquals(company, spyParser.buildCompany(COMPANY));
+        assertNotEquals(" ", spyParser.buildCompany(COMPANY));
+        doThrow(new RuntimeException()).when(spyParser).buildCompany(COMPANY);
     }
 }
