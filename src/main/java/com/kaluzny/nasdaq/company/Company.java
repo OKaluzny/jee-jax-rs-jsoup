@@ -1,9 +1,12 @@
 package com.kaluzny.nasdaq.company;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@NoArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode
+@ToString
 public class Company {
 
     private String exchange;
