@@ -1,1 +1,1 @@
-mvn org.wildfly.plugins:wildfly-maven-plugin:1.0.2.Final:deploy
+mvn org.wildfly.plugins:wildfly-maven-plugin:2.0.1.Final:deploy
