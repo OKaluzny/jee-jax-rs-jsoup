@@ -22,8 +22,6 @@ public class CompanyResource {
     @Path("{symbol}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getCompany(@PathParam("symbol") String companySymbol) {
-        companyService.buildCompany(companySymbol);
-        return Response.ok().build();
+        return Response.ok(companyService.buildCompany(companySymbol)).build();
     }
 }
-
