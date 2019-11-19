@@ -3,13 +3,13 @@ package com.kaluzny;
 import com.kaluzny.nasdaq.company.Company;
 import com.kaluzny.nasdaq.company.CompanyService;
 import org.jsoup.nodes.Document;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
 import java.io.IOException;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 

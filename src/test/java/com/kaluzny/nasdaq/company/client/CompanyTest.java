@@ -1,10 +1,10 @@
 package com.kaluzny.nasdaq.company.client;
 
 import com.kaluzny.nasdaq.company.Company;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CompanyTest {
 
@@ -19,7 +19,7 @@ public class CompanyTest {
         Company company = new Company();
         company.setExchange(EXCHANGE);
         assertTrue(company.getExchange().equalsIgnoreCase(EXCHANGE));
-        assertFalse(SECTOR_COMPANY, false);
+        assertFalse(false, SECTOR_COMPANY);
     }
 
     @Test
@@ -27,7 +27,7 @@ public class CompanyTest {
         Company company = new Company();
         company.setSectorCompany(SECTOR_COMPANY);
         assertTrue(company.getSectorCompany().equalsIgnoreCase(SECTOR_COMPANY));
-        assertFalse(EXCHANGE, false);
+        assertFalse(false, EXCHANGE);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class CompanyTest {
         Company company = new Company();
         company.setSymbolCompany(COMPANY);
         assertTrue(company.getSymbolCompany().equalsIgnoreCase(COMPANY));
-        assertFalse(SECTOR_COMPANY, false);
+        assertFalse( false, SECTOR_COMPANY);
     }
 
     @Test
@@ -43,7 +43,7 @@ public class CompanyTest {
         Company company = new Company();
         company.setExchangePrice(EXCHANGE_PRICE);
         assertTrue(company.getExchangePrice().equalsIgnoreCase(EXCHANGE_PRICE));
-        assertFalse(SECTOR_COMPANY, false);
+        assertFalse(false, SECTOR_COMPANY);
     }
 
     @Test
@@ -51,6 +51,6 @@ public class CompanyTest {
         Company company = new Company();
         company.setMarketTime(MARKET_TIME);
         assertTrue(company.getMarketTime().equalsIgnoreCase(MARKET_TIME));
-        assertFalse(SECTOR_COMPANY, false);
+        assertFalse(false, SECTOR_COMPANY);
     }
 }

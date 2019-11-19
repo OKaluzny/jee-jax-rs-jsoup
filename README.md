@@ -3,7 +3,7 @@
 ## Summary
 
 JAX-RS API based on Java EE.
-This api gets data from the [NASDAQ](http://www.nasdaq.com/symbol/ibm/real-time)
+This api gets data from the [NASDAQ](https://old.nasdaq.com/symbol/ibm/real-time)
 
 ### Tools
 
@@ -11,11 +11,13 @@ This api gets data from the [NASDAQ](http://www.nasdaq.com/symbol/ibm/real-time)
 * Automated testing - [JUnit 4.12](http://junit.org/junit4/)
 * Static Analysis - [FindBugs 3.0.1](http://findbugs.sourceforge.net/)
 * Application Server - [WildFly 10.0.0.Final](http://wildfly.org/)
-* Project Lombok - [lombok 1.18.10](https://projectlombok.org/)
+* JUnit - [JUnit 5.5.2](https://junit.org/junit5/)
+* Mockito - [Mockito 3.1.0](https://site.mockito.org/)
 
 ### Library
 
 * Java HTML Parser - [Jsoup 1.11.3](https://jsoup.org/)
+* Project Lombok - [lombok 1.18.10](https://projectlombok.org/)
 
 ### Build and Deploy
 
