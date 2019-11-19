@@ -8,7 +8,6 @@ This api gets data from the [NASDAQ](https://old.nasdaq.com/symbol/ibm/real-time
 ### Tools
 
 * Build Automation - [Maven 3.3.x](https://maven.apache.org/)
-* Automated testing - [JUnit 4.12](http://junit.org/junit4/)
 * Static Analysis - [FindBugs 3.0.1](http://findbugs.sourceforge.net/)
 * Application Server - [WildFly 10.0.0.Final](http://wildfly.org/)
 * JUnit - [JUnit 5.5.2](https://junit.org/junit5/)
