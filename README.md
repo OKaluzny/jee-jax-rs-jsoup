@@ -1,14 +1,14 @@
 [![Build Status](https://travis-ci.org/OKaluzny/jee-jax-rs-jsoup.svg?branch=master)](https://travis-ci.org/OKaluzny/jee-jax-rs-jsoup)
 [![Coverage Status](https://coveralls.io/repos/github/OKaluzny/jax-rs-parser-nasdaq/badge.svg?branch=master)](https://coveralls.io/github/OKaluzny/jax-rs-parser-nasdaq?branch=master)
+![badge-jdk-8]
 ## Summary
 
 JAX-RS API based on Java EE.
 This api gets data from the [NASDAQ](https://old.nasdaq.com/symbol/ibm/real-time)
 
-### Tools
+### Tools 
 
 * Build Automation - [Maven 3.3.x](https://maven.apache.org/)
-* Automated testing - [JUnit 4.12](http://junit.org/junit4/)
 * Static Analysis - [FindBugs 3.0.1](http://findbugs.sourceforge.net/)
 * Application Server - [WildFly 10.0.0.Final](http://wildfly.org/)
 * JUnit - [JUnit 5.5.2](https://junit.org/junit5/)
@@ -36,3 +36,5 @@ Scripts for the local environment:
 ### The example in the Postman :
 
 ![alt tag](http://i.piccy.info/i9/5dee22ad330d3d02cb5e3fe1eb050050/1479811748/61026/1085055/jax_rs.jpg)
+
+[badge-jdk-8]: https://img.shields.io/badge/jdk-8-lightgray.svg "JDK-8"
