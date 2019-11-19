@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/OKaluzny/jee-jax-rs-jsoup.svg?branch=master)](https://travis-ci.org/OKaluzny/jee-jax-rs-jsoup)
 [![Coverage Status](https://coveralls.io/repos/github/OKaluzny/jax-rs-parser-nasdaq/badge.svg?branch=master)](https://coveralls.io/github/OKaluzny/jax-rs-parser-nasdaq?branch=master)
+[![codebeat badge](https://codebeat.co/badges/e800a88d-6ff0-475f-b853-7c2178c462ea)](https://codebeat.co/projects/github-com-okaluzny-jee-jax-rs-jsoup-master)
 ![badge-jdk-8]
 ## Summary
 
